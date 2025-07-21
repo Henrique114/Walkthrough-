@@ -2,7 +2,7 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/core/routing/History",
 	"sap/m/MessageToast"
-], (Controller, History,MessageToast) => {
+], (Controller, History, MessageToast) => {
 	"use strict";
 
 	return Controller.extend("ui5.walkthrough.controller.Detail", {

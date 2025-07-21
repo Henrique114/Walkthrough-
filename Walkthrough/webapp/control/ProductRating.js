@@ -1,6 +1,6 @@
 sap.ui.define([
 	"sap/ui/core/Control",
-    "sap/m/RatingIndicator",
+	"sap/m/RatingIndicator",
 	"sap/m/Label",
 	"sap/m/Button"
 ], (Control, RatingIndicator, Label, Button) => {
@@ -8,7 +8,7 @@ sap.ui.define([
 
 	return Control.extend("ui5.walkthrough.control.ProductRating", {
 		metadata : {
-            properties : {
+			properties : {
 				value: 	{type : "float", defaultValue : 0}
 			},
 			aggregations : {
@@ -23,7 +23,7 @@ sap.ui.define([
 					}
 				}
 			}
-        },
+		},
 
 		init() {
 			this.setAggregation("_rating", new RatingIndicator({
@@ -78,15 +78,14 @@ sap.ui.define([
 				value: this.getValue()
 			});
 		},
-
-		renderer(oRM, oControl) {
-            oRm.openStart("div", oControl);
+		renderer(oRm, oControl) {
+			oRm.openStart("div", oControl);
 			oRm.class("myAppDemoWTProductRating");
 			oRm.openEnd();
 			oRm.renderControl(oControl.getAggregation("_rating"));
 			oRm.renderControl(oControl.getAggregation("_label"));
 			oRm.renderControl(oControl.getAggregation("_button"));
 			oRm.close("div");
-        }
+		}
 	});
 });
