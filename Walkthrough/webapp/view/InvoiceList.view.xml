@@ -15,7 +15,6 @@
 		</headerToolbar>
 	<Table
       id="invoiceList"
-      headerText="{i18n>invoiceListTitle}"
       class="sapUiResponsiveMargin"
       width="auto"
       items="{
@@ -25,15 +24,6 @@
                 group : true
             }
          }" >
-      <headerToolbar>
-         <Toolbar>
-            <Title text="{i18n>invoiceListTitle}"/>
-            <ToolbarSpacer/>
-            <SearchField 
-               width="50%" 
-               search=".onFilterInvoices"/>
-         </Toolbar>
-      </headerToolbar>
       <columns>
 			<Column
 				hAlign="End"
